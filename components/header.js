@@ -1,4 +1,5 @@
 import { SiGithub, SiHackthebox, SiTwitter } from "react-icons/si";
+import Link from "next/link";
 
 export default function header() {
   return (
@@ -12,13 +13,15 @@ export default function header() {
           />
         </div>
         <div className="shrink w-80 sm:order-2">
-          <a className="font-bold uppercase text-2xl">ShellPunk</a>
+          <Link href={"/"} className="font-bold uppercase text-2xl">
+            ShellPunk
+          </Link>
         </div>
         <div className="w-96 order-3 flex justify-center">
           <div className="flex gap-6">
-            <a><SiGithub color="#888"/></a>
-            <a><SiHackthebox color="#888"/></a>
-            <a><SiTwitter color="#888"/></a>
+            <Link href={"https://github.com"}><SiGithub color="#888"/></Link>
+            <Link href={"/"}><SiHackthebox color="#888"/></Link>
+            <Link href={"/"}><SiTwitter color="#888"/></Link>
           </div>
         </div>
       </div>
