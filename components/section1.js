@@ -1,9 +1,16 @@
 import Link from "next/link"
 import Image from "next/image"
 
+import Author from "./_child/author"
+
 export default function section1() {
+  const bg = {
+    background: "url('/images/banner.png') no-repeat",
+    backgroundPosition: "right"
+  }
+
   return (
-    <section className="py-16">
+    <section className="py-16" style={bg}>
       <div className="container mx-auto md:px-20">
         <h1 className="font-bold text-4xl pb-12 text-center">
           Trending
@@ -40,7 +47,7 @@ function Slide() {
             Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind 
             text by the name of Lorem Ipsum decided to leave for the far World of Grammar.
           </p>
-          <h1>Jorge Moreno.</h1>
+          <Author />
         </div>
       </div>
     </div>
