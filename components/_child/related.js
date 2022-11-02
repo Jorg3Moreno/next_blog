@@ -1,41 +1,26 @@
 import Image from "next/image"
 import Link from "next/link"
 
-import Author from "./_child/author"
+import Author from "./author"
 
-export default function section4() {
+export default function Related() {
   return (
-    <section className="container mx-auto md:px-20 py-16">
-      <div className="grid lg:grid-cols-2">
-        <div className="item">
-          <h1 className="font-bold text-4xl py-12">
-            Business
-          </h1>
-          <div className="flex flex-col gap-6">
-            {Post()}
-            {Post()}
-            {Post()}
-            {Post()}
-          </div>
-        </div>
-        <div className="item">
-          <h1 className="font-bold text-4xl py-12">
-            Travel
-          </h1>
-          <div className="flex flex-col gap-6">
-            {Post()}
-            {Post()}
-            {Post()}
-            {Post()}
-          </div>
-        </div>
+    <section className="pt-20">
+      <h1 className="font-bold text-3xl py-10">
+        Related
+      </h1>
+      <div className="flex flex-col gap-10">
+        { Posts() }
+        { Posts() }
+        { Posts() }
+        { Posts() }
       </div>
     </section>
   )
 }
 
-function Post() {
-  return (
+function Posts() {
+  return(
     <div className="flex gap-5">
       <div className="image flex flex-col justify-start">
         <Link href={"/"}>
@@ -59,7 +44,7 @@ function Post() {
         </div>
         <div className="title">
           <Link href={"/"} className="text-xl font-bold text-gray-800 hover:text-gray-600">
-            Your most unhappy customers are your greatest source of learning
+            Your most unhappy customers are your greatest source of learning 
           </Link>
         </div>
         <Author />
