@@ -32,7 +32,7 @@ export default function Section4() {
           <h1 className="font-bold text-4xl py-12">Travel</h1>
           <div className="flex flex-col gap-6">
             {data ? (
-              data.map((post, idx) => <Post data={post} key={idx} />)
+              data.reverse().map((post, idx) => <Post data={post} key={idx} />)
             ) : (
               <h1 className="text-3xl font-bold text-orange-600 py-10">
                 No post to show
