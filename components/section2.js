@@ -21,7 +21,9 @@ export default function Section2() {
         {data ? (
           data.map((post, idx) => <Post data={post} key={idx} />)
         ) : (
-          <h1>No post to show</h1>
+          <h1 className="text-3xl font-bold text-orange-600 py-10">
+            No post to show
+          </h1>
         )}
       </div>
     </section>
