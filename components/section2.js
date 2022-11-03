@@ -2,13 +2,16 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Author from "./_child/author";
+import Spinner from "./_child/spinner";
+import Error from "./_child/error";
+
 import useFetcher from "../lib/fetcher";
 
 export default function Section2() {
   const { isError, isLoading, data } = useFetcher("/api/posts");
 
-  if (isLoading) return <div>Loading...</div>
-  if (isError) return <div>There is an error, please try it later</div>
+  if (isLoading) return <Spinner />;
+  if (isError) return <Error />;
 
   return (
     <section className="container mx-auto md:px-20 py-10">
