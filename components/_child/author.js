@@ -1,11 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 
-export default function author() {
+export default function author({ img }) {
+  if (!img) return <></>
+
   return (
     <div className="author flex py-5">
       <Image
-        src={"/images/author/author1.jpg"}
+        src={img}
         width={60}
         height={60}
         alt="image author"
