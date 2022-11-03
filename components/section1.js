@@ -54,7 +54,7 @@ function Slide({ data }) {
   return (
     <div className="grid md:grid-cols-2">
       <div className="image">
-        <Link href={"/"}>
+        <Link href={`/posts/${data.id}`}>
           <Image
             src={data.img || "/images/not_found.png"}
             width={600}
@@ -74,7 +74,7 @@ function Slide({ data }) {
         </div>
         <div className="title">
           <Link
-            href={"/"}
+            href={`/posts/${data.id}`}
             className="text-3xl md:text-6xl font-bold text-gray-800 hover:text-gray-600"
           >
             {data.title}

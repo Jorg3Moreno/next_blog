@@ -49,7 +49,7 @@ function Post({ data }) {
   return (
     <div className="flex gap-5">
       <div className="image flex flex-col justify-start">
-        <Link href={"/"}>
+        <Link href={`/posts/${data.id}`}>
           <Image
             src={data.img || "/images/not_found.png"}
             width={300}
@@ -70,7 +70,7 @@ function Post({ data }) {
         </div>
         <div className="title">
           <Link
-            href={"/"}
+            href={`/posts/${data.id}`}
             className="text-xl font-bold text-gray-800 hover:text-gray-600"
           >
             {data.title}

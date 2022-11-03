@@ -34,7 +34,7 @@ function Post({ data }) {
   return (
     <div className="item">
       <div className="images">
-        <Link href={"/"}>
+        <Link href={`/posts/${data.id}`}>
           <Image
             src={data.img || "/images/not_found.png"}
             width={500}
@@ -55,7 +55,7 @@ function Post({ data }) {
         </div>
         <div className="title">
           <Link
-            href={"/"}
+            href={`/posts/${data.id}`}
             className="text-xl font-bold text-gray-800 hover:text-gray-600"
           >
             {data.title}
@@ -69,6 +69,6 @@ function Post({ data }) {
         </p>
         {data.author ? <Author /> : <></>}
       </div>
-    </div>
+    </div >
   );
 }

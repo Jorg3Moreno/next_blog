@@ -18,7 +18,14 @@ export default function Section3() {
     <section className="container mx-auto md:px-20 py-16">
       <h1 className="font-bold text-4xl py-12 text-center">Most Popular</h1>
 
-      <Swiper slidesPerView={2}>
+      <Swiper
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 30
+          },
+        }}
+      >
         {data ? (
           data.map((post, idx) => (
             <SwiperSlide key={idx}>
@@ -39,7 +46,7 @@ function Post({ data }) {
   return (
     <div className="grid">
       <div className="images">
-        <Link href={"/"}>
+        <Link href={`/posts/${data.id}`}>
           <Image
             src={data.img || "/images/not_found.png"}
             width={600}
@@ -59,7 +66,7 @@ function Post({ data }) {
         </div>
         <div className="title">
           <Link
-            href={"/"}
+            href={`/posts/${data.id}`}
             className="text-3xl md:text-4xl font-bold text-gray-800 hover:text-gray-600"
           >
             {data.title}
